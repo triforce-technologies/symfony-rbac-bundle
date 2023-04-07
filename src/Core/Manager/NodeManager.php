@@ -2,11 +2,10 @@
 
 namespace Triforce\RBACBundle\Core\Manager;
 
-use Exception;
 use Triforce\RBACBundle\Entity\NodeInterface;
 use Triforce\RBACBundle\Exception\RbacException;
-use Triforce\RBACBundle\Repository\RoleRepository;
 use Triforce\RBACBundle\Repository\PermissionRepository;
+use Triforce\RBACBundle\Repository\RoleRepository;
 
 abstract class NodeManager implements NodeManagerInterface
 {

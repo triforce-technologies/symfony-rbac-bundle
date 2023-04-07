@@ -2,9 +2,9 @@
 
 namespace Triforce\RBACBundle\Repository;
 
+use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 use Triforce\RBACBundle\Entity\NodeInterface;
 use Triforce\RBACBundle\Exception\RbacException;
-use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 
 interface NestedSetInterface
 {

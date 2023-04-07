@@ -2,18 +2,17 @@
 
 namespace Triforce\RBACBundle\EventSubscriber;
 
-use ReflectionMethod;
 use Psr\Log\LoggerInterface;
-use Triforce\RBACBundle\Core\RbacInterface;
-use Symfony\Component\HttpKernel\KernelEvents;
-use Triforce\RBACBundle\Attribute\AccessControl\HasRole;
-use Triforce\RBACBundle\Attribute\AccessControl\IsGranted;
-use Triforce\RBACBundle\Exception\RbacException;
+use ReflectionMethod;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Security\Core\Security;
+use Triforce\RBACBundle\Attribute\AccessControl\HasRole;
+use Triforce\RBACBundle\Attribute\AccessControl\IsGranted;
+use Triforce\RBACBundle\Core\RbacInterface;
+use Triforce\RBACBundle\Exception\RbacException;
 
 class AccessControlDriver implements EventSubscriberInterface
 {

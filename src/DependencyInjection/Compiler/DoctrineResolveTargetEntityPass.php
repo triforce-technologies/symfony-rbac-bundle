@@ -2,10 +2,10 @@
 
 namespace Triforce\RBACBundle\DependencyInjection\Compiler;
 
-use Triforce\RBACBundle\Entity\PermissionInterface;
-use Triforce\RBACBundle\Entity\RoleInterface;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
 
 class DoctrineResolveTargetEntityPass implements CompilerPassInterface
 {

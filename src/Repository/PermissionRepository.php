@@ -2,16 +2,16 @@
 
 namespace Triforce\RBACBundle\Repository;
 
-use Doctrine\ORM\ORMException;
-use Triforce\RBACBundle\Entity\Permission;
-use Triforce\RBACBundle\Entity\RoleInterface;
-use Doctrine\ORM\Query\ResultSetMapping;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\Persistence\ManagerRegistry;
-use Triforce\RBACBundle\Entity\PermissionInterface;
-use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
-use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
+use Doctrine\ORM\Query\ResultSetMapping;
+use Doctrine\Persistence\ManagerRegistry;
+use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
+use Triforce\RBACBundle\Entity\Permission;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
 
 /**
  * @method Permission|null find($id, $lockMode = null, $lockVersion = null)

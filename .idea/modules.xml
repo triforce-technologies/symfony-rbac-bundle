@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/symfony-rbac.iml" filepath="$PROJECT_DIR$/.idea/symfony-rbac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/triforce-rbac-bundle.iml" filepath="$PROJECT_DIR$/.idea/triforce-rbac-bundle.iml" />
     </modules>
   </component>
 </project>

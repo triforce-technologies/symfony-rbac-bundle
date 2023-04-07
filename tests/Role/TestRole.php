@@ -3,11 +3,11 @@
 namespace Test\Triforce\RBACBundle\Role;
 
 use Exception;
-use Triforce\RBACBundle\Core\Manager\RoleManager;
-use Triforce\RBACBundle\Repository\RoleRepository;
 use Triforce\RBACBundle\Core\Manager\PermissionManager;
-use Triforce\RBACBundle\Repository\PermissionRepository;
+use Triforce\RBACBundle\Core\Manager\RoleManager;
 use Triforce\RBACBundle\Exception\RbacRoleNotFoundException;
+use Triforce\RBACBundle\Repository\PermissionRepository;
+use Triforce\RBACBundle\Repository\RoleRepository;
 
 class TestRole
 {

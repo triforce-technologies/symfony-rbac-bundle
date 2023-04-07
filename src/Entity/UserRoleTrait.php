@@ -2,10 +2,9 @@
 
 namespace Triforce\RBACBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Triforce\RBACBundle\Entity\RoleInterface;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
 use Triforce\RBACBundle\Repository\UserRoleRepository;
 
 #[ORM\Entity(repositoryClass: UserRoleRepository::class)]

@@ -2,10 +2,9 @@
 
 namespace Triforce\RBACBundle\Core\Manager;
 
-use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Entity\PermissionInterface;
 use Triforce\RBACBundle\Exception\RbacException;
 use Triforce\RBACBundle\Repository\PermissionRepository;
-use Triforce\RBACBundle\Entity\PermissionInterface;
 
 /**
  * @property PermissionRepository $repository

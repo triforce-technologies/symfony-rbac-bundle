@@ -11,11 +11,11 @@
 
 namespace Triforce\RBACBundle\Twig;
 
-use Twig\TwigFunction;
+use Symfony\Component\Security\Core\Security;
 use Triforce\RBACBundle\Core\RbacInterface;
 use Triforce\RBACBundle\Exception\RbacException;
 use Twig\Extension\AbstractExtension;
-use Symfony\Component\Security\Core\Security;
+use Twig\TwigFunction;
 
 /**
  * SecurityExtension exposes security context features.

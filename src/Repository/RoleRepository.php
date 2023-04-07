@@ -2,17 +2,17 @@
 
 namespace Triforce\RBACBundle\Repository;
 
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
+use Doctrine\ORM\Query\ResultSetMapping;
+use Doctrine\Persistence\ManagerRegistry;
+use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 use Triforce\RBACBundle\Entity\NodeInterface;
+use Triforce\RBACBundle\Entity\PermissionInterface;
 use Triforce\RBACBundle\Entity\Role;
 use Triforce\RBACBundle\Entity\RoleInterface;
-use Doctrine\ORM\Query\ResultSetMapping;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\Persistence\ManagerRegistry;
-use Triforce\RBACBundle\Entity\PermissionInterface;
-use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 use Triforce\RBACBundle\Exception\RbacRoleNotFoundException;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Role|null find($id, $lockMode = null, $lockVersion = null)

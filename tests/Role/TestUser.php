@@ -3,11 +3,11 @@
 namespace Test\Triforce\RBACBundle\Role;
 
 use App\Entity\User;
-use Triforce\RBACBundle\Core\Rbac;
 use App\Repository\UserRepository;
-use Triforce\RBACBundle\Core\Manager\RoleManager;
-use Triforce\RBACBundle\Core\Manager\RbacInterface;
 use Triforce\RBACBundle\Core\Manager\PermissionManager;
+use Triforce\RBACBundle\Core\Manager\RbacInterface;
+use Triforce\RBACBundle\Core\Manager\RoleManager;
+use Triforce\RBACBundle\Core\Rbac;
 use Triforce\RBACBundle\Entity\PermissionInterface;
 use Triforce\RBACBundle\Entity\RoleInterface;
 

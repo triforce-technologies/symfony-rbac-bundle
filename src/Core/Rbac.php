@@ -2,11 +2,11 @@
 
 namespace Triforce\RBACBundle\Core;
 
-use Webmozart\Assert\Assert;
-use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Core\Manager\PermissionManagerInterface;
 use Triforce\RBACBundle\Core\Manager\RoleManagerInterface;
 use Triforce\RBACBundle\Entity\PermissionInterface;
-use Triforce\RBACBundle\Core\Manager\PermissionManagerInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Webmozart\Assert\Assert;
 
 class Rbac implements RbacInterface
 {

@@ -2,8 +2,8 @@
 
 namespace Triforce\RBACBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\MappedSuperclass]
 abstract class Role extends Node implements RoleInterface

@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Triforce\RBACBundle\Attribute\AccessControl;
 
 use Attribute;
+use Triforce\RBACBundle\Attribute\RBACAttributeInterface;
 use Triforce\RBACBundle\Core\RbacInterface;
 use Triforce\RBACBundle\Exception\RbacException;
-use Triforce\RBACBundle\Attribute\RBACAttributeInterface;
 
 #[Attribute(Attribute::TARGET_METHOD | Attribute::TARGET_CLASS)]
 final class IsGranted implements RBACAttributeInterface

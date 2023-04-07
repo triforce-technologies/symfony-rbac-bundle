@@ -2,7 +2,6 @@
 
 namespace Triforce\RBACBundle\Core\Manager;
 
-use Triforce\RBACBundle\Entity\RoleInterface;
 use Triforce\RBACBundle\Entity\PermissionInterface;
 use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
 

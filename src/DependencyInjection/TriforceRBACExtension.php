@@ -3,10 +3,10 @@
 namespace Triforce\RBACBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
-use Triforce\RBACBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Triforce\RBACBundle\EventSubscriber\AccessControlDriver;
 
 class TriforceRBACExtension extends Extension
 {
@@ -30,6 +30,6 @@ class TriforceRBACExtension extends Extension
 
     public function getAlias(): string
     {
-        return 'rbac';
+        return 'triforce_rbac';
     }
 }
