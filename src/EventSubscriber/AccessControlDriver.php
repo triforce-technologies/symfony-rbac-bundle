@@ -18,9 +18,9 @@ use Symfony\Component\Security\Core\Security;
 class AccessControlDriver implements EventSubscriberInterface
 {
     public function __construct(
-        private RbacInterface $accessControl,
-        private LoggerInterface $accessControlLogger,
-        private Security $security
+        private RbacInterface            $accessControl,
+        private readonly LoggerInterface $accessControlLogger,
+        private readonly Security $security
     ) {
     }
 
@@ -35,6 +35,10 @@ class AccessControlDriver implements EventSubscriberInterface
         $this->config = $config;
     }
 
+    /**
+     * @throws \ReflectionException
+     * @throws RbacException
+     */
     public function onKernelController(ControllerEvent $event)
     {
         $controllers = $event->getController();

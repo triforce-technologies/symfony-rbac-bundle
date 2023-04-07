@@ -4,16 +4,12 @@ namespace RbacBundle\DependencyInjection;
 
 use RbacBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
-use RbacBundle\Core\RoleManagerInterface;
-use RbacBundle\Core\PermissionManagerInterface;
-use RbacBundle\Entity\PermissionInterface;
-use RbacBundle\Entity\RoleInterface;
 use RbacBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class PhpRbacExtension extends Extension
+class RbacExtension extends Extension
 {
     /**
      * {@inheritdoc}
