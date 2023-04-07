@@ -92,7 +92,7 @@ trait NodeEntityTrait
             WHERE
                 node.code = :code
             GROUP BY
-                node.id
+                node.id, parent.tree_left
             HAVING
                 STRING_AGG(parent.code, '/') = :path
             ORDER BY parent.tree_left
