@@ -20,8 +20,8 @@ services:
 
     RbacBundle\Repository\PermissionRepository:
         arguments:
-            $entityClass: '%php_rbac.resolve_target_entities.permission%'
+            $entityClass: '%symfony_rbac.resolve_target_entities.permission%'
 
     RbacBundle\Repository\RoleRepository:
         arguments:
-            $entityClass: '%php_rbac.resolve_target_entities.role%'
+            $entityClass: '%symfony_rbac.resolve_target_entities.role%'
