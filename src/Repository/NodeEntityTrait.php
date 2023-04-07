@@ -82,20 +82,21 @@ trait NodeEntityTrait
             ->getTableName();
         $parts = explode("/", $pathCmpl);
         $sql = "
-            SELECT
-                node.id,
-                STRING_AGG(parent.code, '/') as path
-            FROM
-                {$tableName} as parent
-            INNER JOIN
-                {$tableName} as node ON node.tree_left BETWEEN parent.tree_left AND parent.tree_right
-            WHERE
-                node.code = :code
-            GROUP BY
-                node.id, parent.tree_left
-            HAVING
-                STRING_AGG(parent.code, '/') = :path
-            ORDER BY parent.tree_left
+            SELECT node.id,
+                   string_agg(parent.code, '/') as path
+            FROM (
+                SELECT id
+                     , code
+                     , tree_left
+                     , tree_right
+                FROM  permissions as p
+                ORDER BY p.tree_left
+            ) as parent
+            JOIN permissions as node
+            ON node.tree_left BETWEEN parent.tree_left AND parent.tree_right
+            WHERE node.code = :code
+            GROUP BY node.id
+            HAVING STRING_AGG(parent.code, '/') = :path
         ";
 
         $pdo = $this->getEntityManager()
