@@ -1,15 +1,15 @@
 <?php
 
-namespace SymfonyRbacBundle;
+namespace TriforceRbacBundle;
 
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\Console\Application;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
-use SymfonyRbacBundle\DependencyInjection\Compiler\DoctrineResolveTargetEntityPass;
+use TriforceRbacBundle\DependencyInjection\Compiler\DoctrineResolveTargetEntityPass;
 
-final class SymfonyRbacBundle extends AbstractBundle
+final class TriforceRbacBundle extends AbstractBundle
 {
     public function build(ContainerBuilder $container): void
     {

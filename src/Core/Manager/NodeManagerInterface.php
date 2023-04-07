@@ -1,8 +1,8 @@
 <?php
 
-namespace SymfonyRbacBundle\Core\Manager;
+namespace TriforceRbacBundle\Core\Manager;
 
-use SymfonyRbacBundle\Entity\NodeInterface;
+use TriforceRbacBundle\Entity\NodeInterface;
 
 interface NodeManagerInterface
 {

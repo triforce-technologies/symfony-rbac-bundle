@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyRbacBundle\DependencyInjection;
+namespace TriforceRbacBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
@@ -10,7 +10,7 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('symfony_rbac');
+        $treeBuilder = new TreeBuilder('triforce_rbac');
 
         $treeBuilder->getRootNode()
             ->children()

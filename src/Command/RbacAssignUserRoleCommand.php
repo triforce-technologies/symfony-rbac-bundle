@@ -1,15 +1,15 @@
 <?php
 
-namespace SymfonyRbacBundle\Command;
+namespace TriforceRbacBundle\Command;
 
 use App\Repository\UserRepository;
-use SymfonyRbacBundle\Core\Manager\RoleManager;
-use SymfonyRbacBundle\Repository\RoleRepository;
+use TriforceRbacBundle\Core\Manager\RoleManager;
+use TriforceRbacBundle\Repository\RoleRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use SymfonyRbacBundle\Repository\PermissionRepository;
+use TriforceRbacBundle\Repository\PermissionRepository;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

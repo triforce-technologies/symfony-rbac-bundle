@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SymfonyRbacBundle\Attribute\AccessControl;
+namespace TriforceRbacBundle\Attribute\AccessControl;
 
 use Attribute;
-use SymfonyRbacBundle\Core\RbacInterface;
-use SymfonyRbacBundle\Attribute\RBACAttributeInterface;
-use SymfonyRbacBundle\Exception\RbacException;
+use TriforceRbacBundle\Core\RbacInterface;
+use TriforceRbacBundle\Attribute\RBACAttributeInterface;
+use TriforceRbacBundle\Exception\RbacException;
 
 #[Attribute(Attribute::TARGET_METHOD | Attribute::TARGET_CLASS)]
 final readonly class HasRole implements RBACAttributeInterface

@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyRbacBundle\Core\Manager;
+namespace TriforceRbacBundle\Core\Manager;
 
-use SymfonyRbacBundle\Entity\RoleInterface;
-use SymfonyRbacBundle\Exception\RbacException;
-use SymfonyRbacBundle\Repository\PermissionRepository;
-use SymfonyRbacBundle\Entity\PermissionInterface;
+use TriforceRbacBundle\Entity\RoleInterface;
+use TriforceRbacBundle\Exception\RbacException;
+use TriforceRbacBundle\Repository\PermissionRepository;
+use TriforceRbacBundle\Entity\PermissionInterface;
 
 /**
  * @property PermissionRepository $repository

@@ -1,12 +1,12 @@
 <?php
 
-namespace Test\SymfonyRbacBundle\Permission;
+namespace Test\TriforceRbacBundle\Permission;
 
 use Exception;
-use SymfonyRbacBundle\Core\Manager\RoleManager;
-use SymfonyRbacBundle\Core\Manager\PermissionManager;
-use SymfonyRbacBundle\Exception\RbacPermissionNotFoundException;
-use SymfonyRbacBundle\Repository\PermissionRepository;
+use TriforceRbacBundle\Core\Manager\RoleManager;
+use TriforceRbacBundle\Core\Manager\PermissionManager;
+use TriforceRbacBundle\Exception\RbacPermissionNotFoundException;
+use TriforceRbacBundle\Repository\PermissionRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace SymfonyRbacBundle\DependencyInjection;
+namespace TriforceRbacBundle\DependencyInjection;
 
-use SymfonyRbacBundle\Core\RbacInterface;
+use TriforceRbacBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
-use SymfonyRbacBundle\EventSubscriber\AccessControlDriver;
+use TriforceRbacBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class SymfonyRbacExtension extends Extension
+class TriforceRbacExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -25,12 +25,12 @@ class SymfonyRbacExtension extends Extension
         $definition = $container->getDefinition(AccessControlDriver::class);
         $definition->addMethodCall('load', [$config]);
 
-        $container->setParameter('symfony_rbac.resolve_target_entities.permission', $config['resolve_target_entities']['permission']);
-        $container->setParameter('symfony_rbac.resolve_target_entities.role', $config['resolve_target_entities']['role']);
+        $container->setParameter('triforce_rbac.resolve_target_entities.permission', $config['resolve_target_entities']['permission']);
+        $container->setParameter('triforce_rbac.resolve_target_entities.role', $config['resolve_target_entities']['role']);
     }
 
     public function getAlias(): string
     {
-        return 'symfony_rbac';
+        return 'triforce_rbac';
     }
 }

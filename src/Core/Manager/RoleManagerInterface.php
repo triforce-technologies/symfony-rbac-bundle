@@ -1,9 +1,9 @@
 <?php
 
-namespace SymfonyRbacBundle\Core\Manager;
+namespace TriforceRbacBundle\Core\Manager;
 
-use SymfonyRbacBundle\Entity\RoleInterface;
-use SymfonyRbacBundle\Exception\RbacRoleNotFoundException;
+use TriforceRbacBundle\Entity\RoleInterface;
+use TriforceRbacBundle\Exception\RbacRoleNotFoundException;
 
 interface RoleManagerInterface extends NodeManagerInterface
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SymfonyRbacBundle\Attribute\AccessControl;
+namespace TriforceRbacBundle\Attribute\AccessControl;
 
 use Attribute;
-use SymfonyRbacBundle\Core\RbacInterface;
-use SymfonyRbacBundle\Exception\RbacException;
-use SymfonyRbacBundle\Attribute\RBACAttributeInterface;
+use TriforceRbacBundle\Core\RbacInterface;
+use TriforceRbacBundle\Exception\RbacException;
+use TriforceRbacBundle\Attribute\RBACAttributeInterface;
 
 #[Attribute(Attribute::TARGET_METHOD | Attribute::TARGET_CLASS)]
 final class IsGranted implements RBACAttributeInterface

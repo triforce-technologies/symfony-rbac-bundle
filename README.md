@@ -1,6 +1,6 @@
-# SymfonyRbacBundle
+# TriforceRbacBundle
 
-SymfonyRbacBundle is symfony 6 bundle with full access control library for PHP. It provides NIST Level 2 Standard Hierarchical Role Based Access Control as an easy to use library to PHP developers. It's a rework of the phprbac.net library made by OWASP for symfony 6.
+TriforceRbacBundle is symfony 6 bundle with full access control library for PHP. It provides NIST Level 2 Standard Hierarchical Role Based Access Control as an easy to use library to PHP developers. It's a rework of the phprbac.net library made by OWASP for symfony 6.
 
 ## Table of Content
 
@@ -44,12 +44,12 @@ register the bundle inside config/bundles.php
 
 return [
     ...
-    SymfonyRbacBundle\SymfonyRbacBundle::class => ['all' => true],
+    TriforceRbacBundle\TriforceRbacBundle::class => ['all' => true],
 ];
 ```
 
 
-Add the SymfonyRbacBundle\Entity\UserRoleTrait inside the User entity class to add the rbac role relation.
+Add the TriforceRbacBundle\Entity\UserRoleTrait inside the User entity class to add the rbac role relation.
 
 Update the database schema with doctrine migration or doctrine schema update to create all the tables
 
@@ -86,8 +86,8 @@ example :
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use SymfonyRbacBundle\Entity\Role as EntityRole;
-use SymfonyRbacBundle\Repository\RoleRepository;
+use TriforceRbacBundle\Entity\Role as EntityRole;
+use TriforceRbacBundle\Repository\RoleRepository;
 
 #[ORM\Entity(repositoryClass: RoleRepository::class)]
 #[ORM\Table('my_roles')]
@@ -102,8 +102,8 @@ class Role extends EntityRole
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use SymfonyRbacBundle\Entity\Permission as EntityPermission;
-use SymfonyRbacBundle\Repository\PermissionRepository;
+use TriforceRbacBundle\Entity\Permission as EntityPermission;
+use TriforceRbacBundle\Repository\PermissionRepository;
 
 #[ORM\Entity(repositoryClass: PermissionRepository::class)]
 #[ORM\Table('my_permissions')]
@@ -113,10 +113,10 @@ class Permission extends EntityPermission
 }
 ```
 
-add symfony_rbac.yaml to associate theses entities to the rbac core
+add triforce_rbac.yaml to associate theses entities to the rbac core
 ```yaml
-# config/packages/symfony_rbac.yaml
-symfony_rbac:
+# config/packages/triforce_rbac.yaml
+triforce_rbac:
   no_authentication_section:
     default: deny
   resolve_target_entities:
@@ -131,14 +131,14 @@ examples :
 
 to add a permission to the root
 ```php
-/** @var SymfonyRbacBundle\Core\PermissionManager $manager */
+/** @var TriforceRbacBundle\Core\PermissionManager $manager */
 $manager = $this->container->get(PermissionManager::class);
 $permission = $manager->add("notepad", "Notepad", PermissionManager::ROOT_ID);
 ```
 
 To add a chain or permission
 ```php
-/** @var SymfonyRbacBundle\Core\PermissionManager $manager */
+/** @var TriforceRbacBundle\Core\PermissionManager $manager */
 $manager = $this->container->get(PermissionManager::class);
 $manager->addPath("/notepad/todolist/read", ['notepad' => 'Notepad', 'todolist' => "Todo list", "read" => "Read Access"]);
 ```
@@ -149,14 +149,14 @@ Adding roles use same methods
 
 for the example, i use the chain role "/editor/reviewer". The reviewer is the subrole of the editor, the editor is the subrole of the root "/".
 ```php
-/** @var SymfonyRbacBundle\Core\RoleManager $manager */
+/** @var TriforceRbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $manager->addPath("/editor/reviewer", ['editor' => 'Editor', 'reviewer' => "Reviewer"]);
 ```
 
 Assign permissions to roles
 ```php
-/** @var SymfonyRbacBundle\Core\RoleManager $manager */
+/** @var TriforceRbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $editorId = $manager->getPathId("/editor");
 $editor = $manager->getNode($editorId);
@@ -177,7 +177,7 @@ If the `UserRoleTrait` is in the class `User`, you will have `addRbacRole`.
 Just add the role in this entity
 
 ```php
-/** @var SymfonyRbacBundle\Core\RoleManager $manager */
+/** @var TriforceRbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $editorId = $manager->getPathId("/editor");
 $editor = $manager->getNode($editorId);
@@ -187,7 +187,7 @@ $user->addRbacRole($user);
 $userRepository->add($user, true);
 ```
 
-To test a user's permission or role, use the SymfonyRbacBundle\Core\Rbac class.
+To test a user's permission or role, use the TriforceRbacBundle\Core\Rbac class.
 ```php
 $rbacCtrl = $this->container->get(Rbac::class);
 $rbacCtrl->hasPermission('/notepad', $userId);
@@ -202,7 +202,7 @@ Just add attribute is granted like this example. The attributes `IsGranted` and 
 namespace App\Controller;
 
 ...
-use SymfonyRbacBundle\Attribute\AccessControl as RBAC;
+use TriforceRbacBundle\Attribute\AccessControl as RBAC;
 
 #[Route('/todolist')]
 #[RBAC\IsGranted('/notepad/todolist/read')]

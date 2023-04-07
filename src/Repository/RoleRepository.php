@@ -1,17 +1,17 @@
 <?php
 
-namespace SymfonyRbacBundle\Repository;
+namespace TriforceRbacBundle\Repository;
 
 use Doctrine\ORM\ORMException;
-use SymfonyRbacBundle\Entity\NodeInterface;
-use SymfonyRbacBundle\Entity\Role;
-use SymfonyRbacBundle\Entity\RoleInterface;
+use TriforceRbacBundle\Entity\NodeInterface;
+use TriforceRbacBundle\Entity\Role;
+use TriforceRbacBundle\Entity\RoleInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
-use SymfonyRbacBundle\Entity\PermissionInterface;
-use SymfonyRbacBundle\Core\Manager\NodeManagerInterface;
-use SymfonyRbacBundle\Exception\RbacRoleNotFoundException;
+use TriforceRbacBundle\Entity\PermissionInterface;
+use TriforceRbacBundle\Core\Manager\NodeManagerInterface;
+use TriforceRbacBundle\Exception\RbacRoleNotFoundException;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

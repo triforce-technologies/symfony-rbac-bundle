@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyRbacBundle\Entity;
+namespace TriforceRbacBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
 

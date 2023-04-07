@@ -1,8 +1,8 @@
 <?php
 
-namespace SymfonyRbacBundle\Entity;
+namespace TriforceRbacBundle\Entity;
 
-interface NodeInterface extends \SymfonyRbacBundle\Entity\PermissionInterface
+interface NodeInterface extends \TriforceRbacBundle\Entity\PermissionInterface
 {
     public function getId(): ?int;
 

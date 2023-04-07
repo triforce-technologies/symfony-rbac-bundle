@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyRbacBundle\Entity;
+namespace TriforceRbacBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;

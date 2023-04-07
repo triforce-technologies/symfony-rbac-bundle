@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\SymfonyRbacBundle;
+namespace Test\TriforceRbacBundle;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;

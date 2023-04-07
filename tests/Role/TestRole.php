@@ -1,13 +1,13 @@
 <?php
 
-namespace Test\SymfonyRbacBundle\Role;
+namespace Test\TriforceRbacBundle\Role;
 
 use Exception;
-use SymfonyRbacBundle\Core\Manager\RoleManager;
-use SymfonyRbacBundle\Repository\RoleRepository;
-use SymfonyRbacBundle\Core\Manager\PermissionManager;
-use SymfonyRbacBundle\Repository\PermissionRepository;
-use SymfonyRbacBundle\Exception\RbacRoleNotFoundException;
+use TriforceRbacBundle\Core\Manager\RoleManager;
+use TriforceRbacBundle\Repository\RoleRepository;
+use TriforceRbacBundle\Core\Manager\PermissionManager;
+use TriforceRbacBundle\Repository\PermissionRepository;
+use TriforceRbacBundle\Exception\RbacRoleNotFoundException;
 
 class TestRole
 {
