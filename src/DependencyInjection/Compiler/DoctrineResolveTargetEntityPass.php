@@ -13,8 +13,8 @@ class DoctrineResolveTargetEntityPass implements CompilerPassInterface
     {
         $definition = $container->findDefinition('doctrine.orm.listeners.resolve_target_entity');
 
-        $definition->addMethodCall('addResolveTargetEntity', [PermissionInterface::class, $container->getParameter('php_rbac.resolve_target_entities.permission'), []]);
-        $definition->addMethodCall('addResolveTargetEntity', [RoleInterface::class, $container->getParameter('php_rbac.resolve_target_entities.role'), []]);
+        $definition->addMethodCall('addResolveTargetEntity', [PermissionInterface::class, $container->getParameter('symfony_rbac.resolve_target_entities.permission'), []]);
+        $definition->addMethodCall('addResolveTargetEntity', [RoleInterface::class, $container->getParameter('symfony_rbac.resolve_target_entities.role'), []]);
 
         $definition->addTag('doctrine.event_subscriber');
     }

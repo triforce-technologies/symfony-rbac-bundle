@@ -113,10 +113,10 @@ class Permission extends EntityPermission
 }
 ```
 
-add php_rbac.yaml to associate theses entities to the rbac core
+add symfony_rbac.yaml to associate theses entities to the rbac core
 ```yaml
-# config/packages/php_rbac.yaml
-php_rbac:
+# config/packages/symfony_rbac.yaml
+symfony_rbac:
   no_authentication_section:
     default: deny
   resolve_target_entities:
