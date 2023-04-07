@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RbacBundle\Attribute;
+namespace SymfonyRbacBundle\Attribute;
 
 use Attribute;
-use RbacBundle\Core\RbacInterface;
+use SymfonyRbacBundle\Core\RbacInterface;
 
 #[Attribute]
 interface RBACAttributeInterface

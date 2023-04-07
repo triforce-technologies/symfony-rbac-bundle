@@ -1,12 +1,12 @@
 <?php
 
-namespace RbacBundle\Entity;
+namespace SymfonyRbacBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use RbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Entity\RoleInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use RbacBundle\Repository\UserRoleRepository;
+use SymfonyRbacBundle\Repository\UserRoleRepository;
 
 #[ORM\Entity(repositoryClass: UserRoleRepository::class)]
 

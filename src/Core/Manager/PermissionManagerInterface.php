@@ -1,10 +1,10 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\RoleInterface;
-use RbacBundle\Entity\PermissionInterface;
-use RbacBundle\Exception\RbacPermissionNotFoundException;
+use SymfonyRbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Entity\PermissionInterface;
+use SymfonyRbacBundle\Exception\RbacPermissionNotFoundException;
 
 interface PermissionManagerInterface extends NodeManagerInterface
 {

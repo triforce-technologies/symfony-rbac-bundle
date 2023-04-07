@@ -1,9 +1,9 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\RoleInterface;
-use RbacBundle\Exception\RbacRoleNotFoundException;
+use SymfonyRbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Exception\RbacRoleNotFoundException;
 
 interface RoleManagerInterface extends NodeManagerInterface
 {

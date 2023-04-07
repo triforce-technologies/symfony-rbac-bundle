@@ -1,9 +1,9 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\RoleInterface;
-use RbacBundle\Exception\RbacUserNotProvidedException;
+use SymfonyRbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Exception\RbacUserNotProvidedException;
 
 interface UserManagerInterface
 {

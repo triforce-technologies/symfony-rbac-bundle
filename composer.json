@@ -23,9 +23,9 @@
         "doctrine/orm": "^2.14"
     },
     "autoload": {
-        "psr-4": { "RbacBundle\\": "src/" }
+        "psr-4": { "SymfonyRbacBundle\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\RbacBundle\\": "tests/" }
+        "psr-4": { "Tests\\SymfonyRbacBundle\\": "tests/" }
     }
 }

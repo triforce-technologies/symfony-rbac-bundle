@@ -1,9 +1,9 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\RoleInterface;
-use RbacBundle\Repository\RoleRepository;
+use SymfonyRbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Repository\RoleRepository;
 
 /**
  * @property RoleRepository $repository

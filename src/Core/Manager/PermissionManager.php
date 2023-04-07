@@ -1,11 +1,11 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\RoleInterface;
-use RbacBundle\Exception\RbacException;
-use RbacBundle\Repository\PermissionRepository;
-use RbacBundle\Entity\PermissionInterface;
+use SymfonyRbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Exception\RbacException;
+use SymfonyRbacBundle\Repository\PermissionRepository;
+use SymfonyRbacBundle\Entity\PermissionInterface;
 
 /**
  * @property PermissionRepository $repository

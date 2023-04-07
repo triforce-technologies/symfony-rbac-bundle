@@ -1,6 +1,6 @@
 <?php
 
-namespace RbacBundle\DependencyInjection;
+namespace SymfonyRbacBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;

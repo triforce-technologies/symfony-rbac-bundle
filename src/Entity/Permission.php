@@ -1,6 +1,6 @@
 <?php
 
-namespace RbacBundle\Entity;
+namespace SymfonyRbacBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

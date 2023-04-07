@@ -1,14 +1,14 @@
 <?php
 
-namespace RbacBundle\EventSubscriber;
+namespace SymfonyRbacBundle\EventSubscriber;
 
 use ReflectionMethod;
 use Psr\Log\LoggerInterface;
-use RbacBundle\Core\RbacInterface;
+use SymfonyRbacBundle\Core\RbacInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
-use RbacBundle\Attribute\AccessControl\HasRole;
-use RbacBundle\Attribute\AccessControl\IsGranted;
-use RbacBundle\Exception\RbacException;
+use SymfonyRbacBundle\Attribute\AccessControl\HasRole;
+use SymfonyRbacBundle\Attribute\AccessControl\IsGranted;
+use SymfonyRbacBundle\Exception\RbacException;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

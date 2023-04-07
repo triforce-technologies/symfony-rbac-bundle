@@ -1,14 +1,15 @@
 <?php
 
-namespace RbacBundle;
+namespace SymfonyRbacBundle;
 
+use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\Console\Application;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
-use RbacBundle\DependencyInjection\Compiler\DoctrineResolveTargetEntityPass;
+use SymfonyRbacBundle\DependencyInjection\Compiler\DoctrineResolveTargetEntityPass;
 
-final class RbacBundle extends AbstractBundle
+final class SymfonyRbacBundle extends AbstractBundle
 {
     public function build(ContainerBuilder $container): void
     {

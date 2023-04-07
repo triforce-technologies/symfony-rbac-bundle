@@ -1,11 +1,11 @@
 <?php
 
-namespace RbacBundle\Repository;
+namespace SymfonyRbacBundle\Repository;
 
 use Exception;
-use RbacBundle\Entity\Node;
-use RbacBundle\Exception\RbacException;
-use RbacBundle\Core\Manager\NodeManagerInterface;
+use SymfonyRbacBundle\Entity\Node;
+use SymfonyRbacBundle\Exception\RbacException;
+use SymfonyRbacBundle\Core\Manager\NodeManagerInterface;
 
 trait NodeEntityTrait
 {

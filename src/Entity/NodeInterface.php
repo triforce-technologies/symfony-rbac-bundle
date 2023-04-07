@@ -1,8 +1,8 @@
 <?php
 
-namespace RbacBundle\Entity;
+namespace SymfonyRbacBundle\Entity;
 
-interface NodeInterface extends \RbacBundle\Entity\PermissionInterface
+interface NodeInterface extends \SymfonyRbacBundle\Entity\PermissionInterface
 {
     public function getId(): ?int;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace RbacBundle\Core\Manager;
+namespace SymfonyRbacBundle\Core\Manager;
 
-use RbacBundle\Entity\NodeInterface;
+use SymfonyRbacBundle\Entity\NodeInterface;
 
 interface NodeManagerInterface
 {

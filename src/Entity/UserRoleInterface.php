@@ -1,6 +1,6 @@
 <?php
 
-namespace RbacBundle\Entity;
+namespace SymfonyRbacBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
 

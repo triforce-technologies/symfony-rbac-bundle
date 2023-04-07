@@ -1,15 +1,15 @@
 <?php
 
-namespace RbacBundle\DependencyInjection;
+namespace SymfonyRbacBundle\DependencyInjection;
 
-use RbacBundle\Core\RbacInterface;
+use SymfonyRbacBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
-use RbacBundle\EventSubscriber\AccessControlDriver;
+use SymfonyRbacBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class RbacExtension extends Extension
+class SymfonyRbacExtension extends Extension
 {
     /**
      * {@inheritdoc}

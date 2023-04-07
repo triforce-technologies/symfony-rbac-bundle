@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\RbacBundle;
+namespace Test\SymfonyRbacBundle;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;

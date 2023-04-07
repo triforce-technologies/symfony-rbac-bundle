@@ -1,15 +1,15 @@
 <?php
 
-namespace Test\RbacBundle\Role;
+namespace Test\SymfonyRbacBundle\Role;
 
 use App\Entity\User;
-use RbacBundle\Core\Rbac;
+use SymfonyRbacBundle\Core\Rbac;
 use App\Repository\UserRepository;
-use RbacBundle\Core\Manager\RoleManager;
-use RbacBundle\Core\Manager\RbacInterface;
-use RbacBundle\Core\Manager\PermissionManager;
-use RbacBundle\Entity\PermissionInterface;
-use RbacBundle\Entity\RoleInterface;
+use SymfonyRbacBundle\Core\Manager\RoleManager;
+use SymfonyRbacBundle\Core\Manager\RbacInterface;
+use SymfonyRbacBundle\Core\Manager\PermissionManager;
+use SymfonyRbacBundle\Entity\PermissionInterface;
+use SymfonyRbacBundle\Entity\RoleInterface;
 
 class TestUser
 {

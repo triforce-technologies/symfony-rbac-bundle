@@ -1,6 +1,6 @@
 <?php
 
-namespace RbacBundle\Exception;
+namespace SymfonyRbacBundle\Exception;
 
 use Exception;
 
