@@ -1,15 +1,15 @@
 <?php
 
-namespace Test\PhpRbacBundle\Role;
+namespace Test\RbacBundle\Role;
 
 use App\Entity\User;
-use PhpRbacBundle\Core\Rbac;
+use RbacBundle\Core\Rbac;
 use App\Repository\UserRepository;
-use PhpRbacBundle\Core\Manager\RoleManager;
-use PhpRbacBundle\Core\Manager\RbacInterface;
-use PhpRbacBundle\Core\Manager\PermissionManager;
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Entity\RoleInterface;
+use RbacBundle\Core\Manager\RoleManager;
+use RbacBundle\Core\Manager\RbacInterface;
+use RbacBundle\Core\Manager\PermissionManager;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Entity\RoleInterface;
 
 class TestUser
 {

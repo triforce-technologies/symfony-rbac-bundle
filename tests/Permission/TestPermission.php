@@ -1,12 +1,12 @@
 <?php
 
-namespace Test\PhpRbacBundle\Permission;
+namespace Test\RbacBundle\Permission;
 
 use Exception;
-use PhpRbacBundle\Core\Manager\RoleManager;
-use PhpRbacBundle\Core\Manager\PermissionManager;
-use PhpRbacBundle\Exception\RbacPermissionNotFoundException;
-use PhpRbacBundle\Repository\PermissionRepository;
+use RbacBundle\Core\Manager\RoleManager;
+use RbacBundle\Core\Manager\PermissionManager;
+use RbacBundle\Exception\RbacPermissionNotFoundException;
+use RbacBundle\Repository\PermissionRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

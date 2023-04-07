@@ -1,18 +1,18 @@
 <?php
 
-namespace PhpRbacBundle\Core;
+namespace RbacBundle\Core;
 
 use Webmozart\Assert\Assert;
-use PhpRbacBundle\Entity\RoleInterface;
-use PhpRbacBundle\Core\Manager\RoleManagerInterface;
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Core\Manager\PermissionManagerInterface;
+use RbacBundle\Entity\RoleInterface;
+use RbacBundle\Core\Manager\RoleManagerInterface;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Core\Manager\PermissionManagerInterface;
 
 class Rbac implements RbacInterface
 {
     public function __construct(
-        private PermissionManagerInterface $permissionManager,
-        private RoleManagerInterface $roleManager
+        private readonly PermissionManagerInterface $permissionManager,
+        private readonly RoleManagerInterface       $roleManager
     ) {
     }
 

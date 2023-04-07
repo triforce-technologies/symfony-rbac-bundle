@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpRbacBundle\Core\Manager;
+namespace RbacBundle\Core\Manager;
 
-use PhpRbacBundle\Entity\RoleInterface;
-use PhpRbacBundle\Repository\PermissionRepository;
-use PhpRbacBundle\Entity\PermissionInterface;
+use RbacBundle\Entity\RoleInterface;
+use RbacBundle\Repository\PermissionRepository;
+use RbacBundle\Entity\PermissionInterface;
 
 /**
  * @property PermissionRepository $repository

@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpRbacBundle\Command;
+namespace RbacBundle\Command;
 
-use PhpRbacBundle\Core\Manager\PermissionManager;
+use RbacBundle\Core\Manager\PermissionManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use PhpRbacBundle\Repository\PermissionRepository;
+use RbacBundle\Repository\PermissionRepository;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

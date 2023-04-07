@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpRbacBundle\Core;
+namespace RbacBundle\Core;
 
 use Exception;
 use Symfony\Component\HttpFoundation\Request;

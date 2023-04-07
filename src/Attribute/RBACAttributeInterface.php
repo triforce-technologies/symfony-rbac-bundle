@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PhpRbacBundle\Attribute;
+namespace RbacBundle\Attribute;
 
 use Attribute;
-use PhpRbacBundle\Core\RbacInterface;
+use RbacBundle\Core\RbacInterface;
 
 #[Attribute]
 interface RBACAttributeInterface

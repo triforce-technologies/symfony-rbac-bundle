@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace PhpRbacBundle\Twig;
+namespace RbacBundle\Twig;
 
 use Twig\TwigFunction;
-use PhpRbacBundle\Core\RbacInterface;
-use PhpRbacBundle\Exception\RbacException;
+use RbacBundle\Core\RbacInterface;
+use RbacBundle\Exception\RbacException;
 use Twig\Extension\AbstractExtension;
 use Symfony\Component\Security\Core\Security;
 

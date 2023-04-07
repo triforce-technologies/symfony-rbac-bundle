@@ -1,6 +1,6 @@
-# PhpRbacBundle
+# RbacBundle
 
-PhpRBACBundle is symfony 6 bundle with full access control library for PHP. It provides NIST Level 2 Standard Hierarchical Role Based Access Control as an easy to use library to PHP developers. It's a rework of the phprbac.net library made by OWASP for symfony 6.
+RbacBundle is symfony 6 bundle with full access control library for PHP. It provides NIST Level 2 Standard Hierarchical Role Based Access Control as an easy to use library to PHP developers. It's a rework of the phprbac.net library made by OWASP for symfony 6.
 
 ## Table of Content
 
@@ -44,12 +44,12 @@ register the bundle inside config/bundles.php
 
 return [
     ...
-    PhpRbacBundle\PhpRbacBundle::class => ['all' => true],
+    RbacBundle\RbacBundle::class => ['all' => true],
 ];
 ```
 
 
-Add the PhpRbacBundle\Entity\UserRoleTrait inside the User entity class to add the rbac role relation.
+Add the RbacBundle\Entity\UserRoleTrait inside the User entity class to add the rbac role relation.
 
 Update the database schema with doctrine migration or doctrine schema update to create all the tables
 
@@ -86,8 +86,8 @@ example :
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use PhpRbacBundle\Entity\Role as EntityRole;
-use PhpRbacBundle\Repository\RoleRepository;
+use RbacBundle\Entity\Role as EntityRole;
+use RbacBundle\Repository\RoleRepository;
 
 #[ORM\Entity(repositoryClass: RoleRepository::class)]
 #[ORM\Table('my_roles')]
@@ -102,8 +102,8 @@ class Role extends EntityRole
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use PhpRbacBundle\Entity\Permission as EntityPermission;
-use PhpRbacBundle\Repository\PermissionRepository;
+use RbacBundle\Entity\Permission as EntityPermission;
+use RbacBundle\Repository\PermissionRepository;
 
 #[ORM\Entity(repositoryClass: PermissionRepository::class)]
 #[ORM\Table('my_permissions')]
@@ -131,14 +131,14 @@ examples :
 
 to add a permission to the root
 ```php
-/** @var PhpRbacBundle\Core\PermissionManager $manager */
+/** @var RbacBundle\Core\PermissionManager $manager */
 $manager = $this->container->get(PermissionManager::class);
 $permission = $manager->add("notepad", "Notepad", PermissionManager::ROOT_ID);
 ```
 
 To add a chain or permission
 ```php
-/** @var PhpRbacBundle\Core\PermissionManager $manager */
+/** @var RbacBundle\Core\PermissionManager $manager */
 $manager = $this->container->get(PermissionManager::class);
 $manager->addPath("/notepad/todolist/read", ['notepad' => 'Notepad', 'todolist' => "Todo list", "read" => "Read Access"]);
 ```
@@ -149,14 +149,14 @@ Adding roles use same methods
 
 for the example, i use the chain role "/editor/reviewer". The reviewer is the subrole of the editor, the editor is the subrole of the root "/".
 ```php
-/** @var PhpRbacBundle\Core\RoleManager $manager */
+/** @var RbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $manager->addPath("/editor/reviewer", ['editor' => 'Editor', 'reviewer' => "Reviewer"]);
 ```
 
 Assign permissions to roles
 ```php
-/** @var PhpRbacBundle\Core\RoleManager $manager */
+/** @var RbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $editorId = $manager->getPathId("/editor");
 $editor = $manager->getNode($editorId);
@@ -177,7 +177,7 @@ If the `UserRoleTrait` is in the class `User`, you will have `addRbacRole`.
 Just add the role in this entity
 
 ```php
-/** @var PhpRbacBundle\Core\RoleManager $manager */
+/** @var RbacBundle\Core\RoleManager $manager */
 $manager = $this->container->get(RoleManager::class);
 $editorId = $manager->getPathId("/editor");
 $editor = $manager->getNode($editorId);
@@ -187,7 +187,7 @@ $user->addRbacRole($user);
 $userRepository->add($user, true);
 ```
 
-To test a user's permission or role, use the PhpRbacBundle\Core\Rbac class.
+To test a user's permission or role, use the RbacBundle\Core\Rbac class.
 ```php
 $rbacCtrl = $this->container->get(Rbac::class);
 $rbacCtrl->hasPermission('/notepad', $userId);
@@ -202,7 +202,7 @@ Just add attribute is granted like this example. The attributes `IsGranted` and 
 namespace App\Controller;
 
 ...
-use PhpRbacBundle\Attribute\AccessControl as RBAC;
+use RbacBundle\Attribute\AccessControl as RBAC;
 
 #[Route('/todolist')]
 #[RBAC\IsGranted('/notepad/todolist/read')]

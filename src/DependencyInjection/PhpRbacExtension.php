@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpRbacBundle\DependencyInjection;
+namespace RbacBundle\DependencyInjection;
 
-use PhpRbacBundle\Core\RbacInterface;
+use RbacBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
-use PhpRbacBundle\Core\RoleManagerInterface;
-use PhpRbacBundle\Core\PermissionManagerInterface;
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Entity\RoleInterface;
-use PhpRbacBundle\EventSubscriber\AccessControlDriver;
+use RbacBundle\Core\RoleManagerInterface;
+use RbacBundle\Core\PermissionManagerInterface;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Entity\RoleInterface;
+use RbacBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;

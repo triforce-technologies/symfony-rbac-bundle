@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpRbacBundle\Command;
+namespace RbacBundle\Command;
 
-use PhpRbacBundle\Entity\Role;
-use PhpRbacBundle\Entity\Permission;
-use PhpRbacBundle\Repository\RoleRepository;
+use RbacBundle\Entity\Role;
+use RbacBundle\Entity\Permission;
+use RbacBundle\Repository\RoleRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use PhpRbacBundle\Repository\PermissionRepository;
+use RbacBundle\Repository\PermissionRepository;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

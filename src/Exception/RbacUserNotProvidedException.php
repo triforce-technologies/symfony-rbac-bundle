@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpRbacBundle\Exception;
+namespace RbacBundle\Exception;
 
 use Exception;
 

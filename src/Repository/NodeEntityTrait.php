@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpRbacBundle\Repository;
+namespace RbacBundle\Repository;
 
 use Exception;
-use PhpRbacBundle\Entity\Node;
-use PhpRbacBundle\Exception\RbacException;
-use PhpRbacBundle\Core\Manager\NodeManagerInterface;
+use RbacBundle\Entity\Node;
+use RbacBundle\Exception\RbacException;
+use RbacBundle\Core\Manager\NodeManagerInterface;
 
 trait NodeEntityTrait
 {

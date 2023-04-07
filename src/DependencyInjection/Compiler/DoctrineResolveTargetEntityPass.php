@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpRbacBundle\DependencyInjection\Compiler;
+namespace RbacBundle\DependencyInjection\Compiler;
 
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Entity\RoleInterface;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Entity\RoleInterface;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

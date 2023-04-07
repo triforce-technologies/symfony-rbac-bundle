@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpRbacBundle\Repository;
+namespace RbacBundle\Repository;
 
 use Doctrine\ORM\ORMException;
-use PhpRbacBundle\Entity\Permission;
-use PhpRbacBundle\Entity\RoleInterface;
+use RbacBundle\Entity\Permission;
+use RbacBundle\Entity\RoleInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Core\Manager\NodeManagerInterface;
-use PhpRbacBundle\Exception\RbacPermissionNotFoundException;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Core\Manager\NodeManagerInterface;
+use RbacBundle\Exception\RbacPermissionNotFoundException;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

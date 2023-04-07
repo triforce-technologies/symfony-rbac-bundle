@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpRbacBundle\DependencyInjection;
+namespace RbacBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
@@ -17,7 +17,7 @@ final class Configuration implements ConfigurationInterface
                 ->arrayNode('no_authentication_section')
                     ->children()
                         ->scalarNode('default')
-                            ->info('Set default deny or allow if access control attribute is missing with aurhorized user')
+                            ->info('Set default deny or allow if access control attribute is missing with authorized user')
                             ->defaultValue('deny')
                         ->end()
                     ->end()

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpRbacBundle\Entity;
+namespace RbacBundle\Entity;
 
 interface NodeInterface
 {

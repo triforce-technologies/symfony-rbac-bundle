@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace PhpRbacBundle\Attribute\AccessControl;
+namespace RbacBundle\Attribute\AccessControl;
 
 use Attribute;
-use PhpRbacBundle\Core\RbacInterface;
-use PhpRbacBundle\Attribute\RBACAttributeInterface;
-use PhpRbacBundle\Exception\RbacException;
+use RbacBundle\Core\RbacInterface;
+use RbacBundle\Attribute\RBACAttributeInterface;
+use RbacBundle\Exception\RbacException;
 
 #[Attribute(Attribute::TARGET_METHOD | Attribute::TARGET_CLASS)]
-final class HasRole implements RBACAttributeInterface
+final readonly class HasRole implements RBACAttributeInterface
 {
     public function __construct(
-        public readonly string $role = "",
-        public readonly ?int $statusCode = 403,
-        public readonly ?string $message = 'This ressource is not allowed for the current user'
+        public string  $role = "",
+        public ?int    $statusCode = 403,
+        public ?string $message = 'This resource is not allowed for the current user'
     ) {
     }
 

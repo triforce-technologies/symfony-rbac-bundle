@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpRbacBundle\Core\Manager;
+namespace RbacBundle\Core\Manager;
 
 use Exception;
-use PhpRbacBundle\Entity\NodeInterface;
-use PhpRbacBundle\Exception\RbacException;
-use PhpRbacBundle\Repository\RoleRepository;
-use PhpRbacBundle\Repository\PermissionRepository;
+use RbacBundle\Entity\NodeInterface;
+use RbacBundle\Exception\RbacException;
+use RbacBundle\Repository\RoleRepository;
+use RbacBundle\Repository\PermissionRepository;
 
 abstract class NodeManager implements NodeManagerInterface
 {

@@ -1,9 +1,11 @@
 <?php
 
-namespace PhpRbacBundle\Core;
+namespace RbacBundle\Core;
 
-use PhpRbacBundle\Entity\PermissionInterface;
-use PhpRbacBundle\Entity\RoleInterface;
+use RbacBundle\Entity\PermissionInterface;
+use RbacBundle\Entity\RoleInterface;
+use RbacBundle\Exception\RbacPermissionNotFoundException;
+use RbacBundle\Exception\RbacUserNotProvidedException;
 
 interface RbacInterface
 {
