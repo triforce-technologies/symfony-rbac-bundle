@@ -202,13 +202,13 @@ class RoleRepository extends ServiceEntityRepository implements NestedSetInterfa
             SELECT
                 COUNT(*) as result
             FROM
-                user_role
+                user_roles
             INNER JOIN
-                {$this->tableName} AS TRdirect ON (TRdirect.id=user_role.role_id)
+                {$this->tableName} AS TRdirect ON (TRdirect.id=user_roles.role_id)
             INNER JOIN
                 {$this->tableName} AS TR ON (TR.tree_left BETWEEN TRdirect.tree_left AND TRdirect.tree_right)
             WHERE
-                user_role.user_id = :userId AND TR.ID = :roleId
+                user_roles.user_id = :userId AND TR.ID = :roleId
         ";
         $query = $pdo->prepare($sql);
         $query->bindValue(":roleId", $roleId);

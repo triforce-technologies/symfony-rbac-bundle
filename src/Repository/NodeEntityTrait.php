@@ -2,6 +2,7 @@
 
 namespace Triforce\RBACBundle\Repository;
 
+use Doctrine\DBAL\Schema\Column;
 use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 use Triforce\RBACBundle\Entity\Node;
 use Triforce\RBACBundle\Exception\RbacException;
@@ -80,23 +81,25 @@ trait NodeEntityTrait
 
         $tableName = $this->getClassMetadata()
             ->getTableName();
+
         $parts = explode("/", $pathCmpl);
         $sql = "
-            SELECT node.id,
-                   string_agg(parent.code, '/') as path
+            SELECT
+                node.id,
+                string_agg(parent.code, '/') as path
             FROM (
                 SELECT id
                      , code
                      , tree_left
                      , tree_right
-                FROM  permissions as p
+                FROM  {$tableName} as p
                 ORDER BY p.tree_left
             ) as parent
-            JOIN permissions as node
+            JOIN {$tableName} as node
             ON node.tree_left BETWEEN parent.tree_left AND parent.tree_right
             WHERE node.code = :code
             GROUP BY node.id
-            HAVING STRING_AGG(parent.code, '/') = :path
+            HAVING string_agg(parent.code, '/') = :path;
         ";
 
         $pdo = $this->getEntityManager()

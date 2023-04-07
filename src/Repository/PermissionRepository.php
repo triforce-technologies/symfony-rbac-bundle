@@ -156,9 +156,9 @@ class PermissionRepository extends ServiceEntityRepository implements NestedSetI
             SELECT
                 COUNT(*) AS result
             FROM
-                user_role
+                user_roles
             INNER JOIN
-                {$this->roleTableName} AS TRdirect ON TRdirect.ID=user_role.role_id
+                {$this->roleTableName} AS TRdirect ON TRdirect.ID=user_roles.role_id
             INNER JOIN
                 {$this->roleTableName} AS TR ON TR.tree_left BETWEEN TRdirect.tree_left AND TRdirect.tree_right
             INNER JOIN
@@ -169,7 +169,7 @@ class PermissionRepository extends ServiceEntityRepository implements NestedSetI
                         role_permission AS TRel ON TP.ID=TRel.permission_id
                 ) ON TR.ID = TRel.role_id
             WHERE
-                user_role.user_id = :userId
+                user_roles.user_id = :userId
                 AND TPdirect.id = :permissionId
         ";
         $query = $pdo->prepare($sql);

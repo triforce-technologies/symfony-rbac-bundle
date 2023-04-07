@@ -12,8 +12,8 @@ use Triforce\RBACBundle\Repository\UserRoleRepository;
 trait UserRoleTrait
 {
     #[ORM\ManyToMany(targetEntity: RoleInterface::class, cascade:['persist', 'remove', 'refresh'])]
-    #[ORM\JoinTable(name: "user_role")]
-    #[ORM\JoinColumn(name: "user_id", referencedColumnName: "id", onDelete: "cascade")]
+    #[ORM\JoinTable(name: "user_roles")]
+    #[ORM\JoinColumn(name: "user_id", referencedColumnName: "user_id", onDelete: "cascade")]
     #[ORM\InverseJoinColumn(name: "role_id", referencedColumnName: "id", onDelete: "cascade")]
     private Collection $rbacRoles;
 
