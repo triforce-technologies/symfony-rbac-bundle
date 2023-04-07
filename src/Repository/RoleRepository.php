@@ -40,11 +40,13 @@ class RoleRepository extends ServiceEntityRepository implements NestedSetInterfa
 
     public function initTable()
     {
-        $sql = "INSERT INTO {$this->tableName} (id, code, description, tree_left, tree_right) VALUES (1, 'root', 'root', 0, 1);";
-        $sql .= "INSERT INTO role_permission (role_id, permission_id) VALUES (1, 1)";
         $this->getEntityManager()
             ->getConnection()
-            ->executeQuery($sql);
+            ->executeQuery("INSERT INTO {$this->tableName} (id, code, description, tree_left, tree_right) VALUES (1, 'root', 'root', 0, 1);");
+
+        $this->getEntityManager()
+            ->getConnection()
+            ->executeQuery("INSERT INTO role_permission (role_id, permission_id) VALUES (1, 1)");
     }
 
     /**
