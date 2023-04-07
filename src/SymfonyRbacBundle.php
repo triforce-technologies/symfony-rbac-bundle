@@ -21,9 +21,4 @@ final class SymfonyRbacBundle extends AbstractBundle
             1000
         );
     }
-
-    public function registerCommands(Application $application)
-    {
-        // noop
-    }
 }
