@@ -27,9 +27,6 @@ abstract class Node implements NodeInterface
     #[ORM\Column(name:'tree_right', type: 'integer')]
     protected ?int $right;
 
-    #[ORM\Column(name:'level', type: 'integer')]
-    protected ?int $level;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -87,17 +84,5 @@ abstract class Node implements NodeInterface
     public function __toString(): string
     {
         return $this->getCode();
-    }
-
-    public function getLevel(): ?int
-    {
-        return $this->level;
-    }
-
-    public function setLevel(int $level): static
-    {
-        $this->level = $level;
-
-        return $this;
     }
 }
