@@ -40,10 +40,6 @@ class PermissionRepository extends ServiceEntityRepository implements NestedSetI
 
     public function initTable()
     {
-        $sql = "SET FOREIGN_KEY_CHECKS = 0; TRUNCATE role_permission; TRUNCATE {$this->tableName}; SET FOREIGN_KEY_CHECKS = 1";
-        $this->getEntityManager()
-            ->getConnection()
-            ->executeQuery($sql);
         $sql = "INSERT INTO {$this->tableName} (id, code, description, tree_left, tree_right) VALUES (1, 'root', 'root', 0, 1)";
         $this->getEntityManager()
             ->getConnection()

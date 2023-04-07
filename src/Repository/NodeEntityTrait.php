@@ -84,7 +84,7 @@ trait NodeEntityTrait
         $sql = "
             SELECT
                 node.id,
-                GROUP_CONCAT(parent.code ORDER BY parent.tree_left SEPARATOR '/') as path
+                STRING_AGG(parent.code, '/') as path
             FROM
                 {$tableName} as parent
             INNER JOIN
@@ -94,7 +94,8 @@ trait NodeEntityTrait
             GROUP BY
                 node.id
             HAVING
-                path = :path
+                STRING_AGG(parent.code, '/') = :path
+            ORDER BY parent.tree_left
         ";
 
         $pdo = $this->getEntityManager()
