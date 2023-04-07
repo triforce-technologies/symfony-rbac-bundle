@@ -1,6 +1,6 @@
 <?php
 
-namespace TriforceRbacBundle\Core;
+namespace Triforce\RBACBundle\Core;
 
 use Exception;
 use Symfony\Component\HttpFoundation\Request;

@@ -1,11 +1,11 @@
 <?php
 
-namespace TriforceRbacBundle\Core;
+namespace Triforce\RBACBundle\Core;
 
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Entity\RoleInterface;
-use TriforceRbacBundle\Exception\RbacPermissionNotFoundException;
-use TriforceRbacBundle\Exception\RbacUserNotProvidedException;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
+use Triforce\RBACBundle\Exception\RbacUserNotProvidedException;
 
 interface RbacInterface
 {

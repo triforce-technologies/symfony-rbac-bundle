@@ -1,10 +1,10 @@
 <?php
 
-namespace TriforceRbacBundle\Core\Manager;
+namespace Triforce\RBACBundle\Core\Manager;
 
-use TriforceRbacBundle\Entity\RoleInterface;
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Exception\RbacPermissionNotFoundException;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
 
 interface PermissionManagerInterface extends NodeManagerInterface
 {

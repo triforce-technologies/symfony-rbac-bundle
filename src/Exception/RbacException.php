@@ -1,6 +1,6 @@
 <?php
 
-namespace TriforceRbacBundle\Exception;
+namespace Triforce\RBACBundle\Exception;
 
 use Exception;
 

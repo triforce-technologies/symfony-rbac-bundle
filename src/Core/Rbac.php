@@ -1,12 +1,12 @@
 <?php
 
-namespace TriforceRbacBundle\Core;
+namespace Triforce\RBACBundle\Core;
 
 use Webmozart\Assert\Assert;
-use TriforceRbacBundle\Entity\RoleInterface;
-use TriforceRbacBundle\Core\Manager\RoleManagerInterface;
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Core\Manager\PermissionManagerInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Core\Manager\RoleManagerInterface;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Core\Manager\PermissionManagerInterface;
 
 class Rbac implements RbacInterface
 {

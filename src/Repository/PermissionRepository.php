@@ -1,16 +1,16 @@
 <?php
 
-namespace TriforceRbacBundle\Repository;
+namespace Triforce\RBACBundle\Repository;
 
 use Doctrine\ORM\ORMException;
-use TriforceRbacBundle\Entity\Permission;
-use TriforceRbacBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Entity\Permission;
+use Triforce\RBACBundle\Entity\RoleInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Core\Manager\NodeManagerInterface;
-use TriforceRbacBundle\Exception\RbacPermissionNotFoundException;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
+use Triforce\RBACBundle\Exception\RbacPermissionNotFoundException;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

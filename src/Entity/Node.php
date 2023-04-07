@@ -1,6 +1,6 @@
 <?php
 
-namespace TriforceRbacBundle\Entity;
+namespace Triforce\RBACBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\String\Slugger\AsciiSlugger;

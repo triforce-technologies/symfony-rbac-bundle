@@ -1,12 +1,12 @@
 <?php
 
-namespace TriforceRbacBundle\Core\Manager;
+namespace Triforce\RBACBundle\Core\Manager;
 
 use Exception;
-use TriforceRbacBundle\Entity\NodeInterface;
-use TriforceRbacBundle\Exception\RbacException;
-use TriforceRbacBundle\Repository\RoleRepository;
-use TriforceRbacBundle\Repository\PermissionRepository;
+use Triforce\RBACBundle\Entity\NodeInterface;
+use Triforce\RBACBundle\Exception\RbacException;
+use Triforce\RBACBundle\Repository\RoleRepository;
+use Triforce\RBACBundle\Repository\PermissionRepository;
 
 abstract class NodeManager implements NodeManagerInterface
 {

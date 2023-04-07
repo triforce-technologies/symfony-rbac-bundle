@@ -1,10 +1,10 @@
 <?php
 
-namespace TriforceRbacBundle\DependencyInjection;
+namespace Triforce\RBACBundle\DependencyInjection;
 
-use TriforceRbacBundle\Core\RbacInterface;
+use Triforce\RBACBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
-use TriforceRbacBundle\EventSubscriber\AccessControlDriver;
+use Triforce\RBACBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;

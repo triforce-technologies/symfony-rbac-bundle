@@ -6,7 +6,7 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    TriforceRbacBundle\:
+    Triforce\RBACBundle\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
@@ -14,14 +14,14 @@ services:
             - '../src/Exception/'
             - '../src/Repository/'
 
-    TriforceRbacBundle\EventSubscriber\AccessControlDriver:
+    Triforce\RBACBundle\EventSubscriber\AccessControlDriver:
       tags:
         - { name: kernel.event_listener, event: onKernelController }
 
-    TriforceRbacBundle\Repository\PermissionRepository:
+    Triforce\RBACBundle\Repository\PermissionRepository:
         arguments:
             $entityClass: '%triforce_rbac.resolve_target_entities.permission%'
 
-    TriforceRbacBundle\Repository\RoleRepository:
+    Triforce\RBACBundle\Repository\RoleRepository:
         arguments:
             $entityClass: '%triforce_rbac.resolve_target_entities.role%'

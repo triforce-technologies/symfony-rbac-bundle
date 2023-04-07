@@ -1,6 +1,6 @@
 <?php
 
-namespace TriforceRbacBundle\DependencyInjection;
+namespace Triforce\RBACBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;

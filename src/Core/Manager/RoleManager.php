@@ -1,9 +1,9 @@
 <?php
 
-namespace TriforceRbacBundle\Core\Manager;
+namespace Triforce\RBACBundle\Core\Manager;
 
-use TriforceRbacBundle\Entity\RoleInterface;
-use TriforceRbacBundle\Repository\RoleRepository;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Repository\RoleRepository;
 
 /**
  * @property RoleRepository $repository

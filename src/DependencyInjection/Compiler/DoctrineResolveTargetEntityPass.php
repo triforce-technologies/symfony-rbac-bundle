@@ -1,9 +1,9 @@
 <?php
 
-namespace TriforceRbacBundle\DependencyInjection\Compiler;
+namespace Triforce\RBACBundle\DependencyInjection\Compiler;
 
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

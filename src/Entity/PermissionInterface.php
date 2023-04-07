@@ -1,6 +1,6 @@
 <?php
 
-namespace TriforceRbacBundle\Entity;
+namespace Triforce\RBACBundle\Entity;
 
 interface PermissionInterface extends NodeInterface
 {

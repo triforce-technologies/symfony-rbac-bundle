@@ -1,9 +1,9 @@
 <?php
 
-namespace TriforceRbacBundle\Core\Manager;
+namespace Triforce\RBACBundle\Core\Manager;
 
-use TriforceRbacBundle\Entity\RoleInterface;
-use TriforceRbacBundle\Exception\RbacUserNotProvidedException;
+use Triforce\RBACBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Exception\RbacUserNotProvidedException;
 
 interface UserManagerInterface
 {

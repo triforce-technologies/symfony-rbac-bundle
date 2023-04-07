@@ -1,15 +1,15 @@
 <?php
 
-namespace Test\TriforceRbacBundle\Role;
+namespace Test\Triforce\RBACBundle\Role;
 
 use App\Entity\User;
-use TriforceRbacBundle\Core\Rbac;
+use Triforce\RBACBundle\Core\Rbac;
 use App\Repository\UserRepository;
-use TriforceRbacBundle\Core\Manager\RoleManager;
-use TriforceRbacBundle\Core\Manager\RbacInterface;
-use TriforceRbacBundle\Core\Manager\PermissionManager;
-use TriforceRbacBundle\Entity\PermissionInterface;
-use TriforceRbacBundle\Entity\RoleInterface;
+use Triforce\RBACBundle\Core\Manager\RoleManager;
+use Triforce\RBACBundle\Core\Manager\RbacInterface;
+use Triforce\RBACBundle\Core\Manager\PermissionManager;
+use Triforce\RBACBundle\Entity\PermissionInterface;
+use Triforce\RBACBundle\Entity\RoleInterface;
 
 class TestUser
 {

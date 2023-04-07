@@ -1,9 +1,9 @@
 <?php
 
-namespace TriforceRbacBundle\Command;
+namespace Triforce\RBACBundle\Command;
 
-use TriforceRbacBundle\Core\Manager\RoleManager;
-use TriforceRbacBundle\Repository\RoleRepository;
+use Triforce\RBACBundle\Core\Manager\RoleManager;
+use Triforce\RBACBundle\Repository\RoleRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\Question;

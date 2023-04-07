@@ -1,8 +1,8 @@
 <?php
 
-namespace TriforceRbacBundle\Core\Manager;
+namespace Triforce\RBACBundle\Core\Manager;
 
-use TriforceRbacBundle\Entity\NodeInterface;
+use Triforce\RBACBundle\Entity\NodeInterface;
 
 interface NodeManagerInterface
 {

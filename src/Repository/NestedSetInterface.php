@@ -1,10 +1,10 @@
 <?php
 
-namespace TriforceRbacBundle\Repository;
+namespace Triforce\RBACBundle\Repository;
 
-use TriforceRbacBundle\Entity\NodeInterface;
-use TriforceRbacBundle\Exception\RbacException;
-use TriforceRbacBundle\Core\Manager\NodeManagerInterface;
+use Triforce\RBACBundle\Entity\NodeInterface;
+use Triforce\RBACBundle\Exception\RbacException;
+use Triforce\RBACBundle\Core\Manager\NodeManagerInterface;
 
 interface NestedSetInterface
 {
