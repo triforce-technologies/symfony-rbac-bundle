@@ -3,6 +3,7 @@
 namespace RbacBundle\Repository;
 
 use Doctrine\ORM\ORMException;
+use RbacBundle\Entity\NodeInterface;
 use RbacBundle\Entity\Role;
 use RbacBundle\Entity\RoleInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
@@ -52,10 +53,8 @@ class RoleRepository extends ServiceEntityRepository implements NestedSetInterfa
     }
 
     /**
-     * @throws ORMException
-     * @throws OptimisticLockException
      */
-    public function add(Role $entity, bool $flush = true): void
+    public function add(NodeInterface $entity, bool $flush = true): void
     {
         $this->_em->persist($entity);
         if ($flush) {
@@ -67,7 +66,7 @@ class RoleRepository extends ServiceEntityRepository implements NestedSetInterfa
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Role $entity, bool $flush = true): void
+    public function remove(NodeInterface $entity, bool $flush = true): void
     {
         $this->_em->remove($entity);
         if ($flush) {
@@ -147,7 +146,7 @@ class RoleRepository extends ServiceEntityRepository implements NestedSetInterfa
         return $result;
     }
 
-    public function deletePermissions(Role $role): Role
+    public function deletePermissions(RoleInterface $role): RoleInterface
     {
         $role->setPermissions(null);
         $this->add($role, true);

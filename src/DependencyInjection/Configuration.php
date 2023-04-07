@@ -10,7 +10,7 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('php_rbac');
+        $treeBuilder = new TreeBuilder('symfony_rbac');
 
         $treeBuilder->getRootNode()
             ->children()

@@ -3,6 +3,7 @@
 namespace RbacBundle\Core\Manager;
 
 use RbacBundle\Entity\RoleInterface;
+use RbacBundle\Exception\RbacException;
 use RbacBundle\Repository\PermissionRepository;
 use RbacBundle\Entity\PermissionInterface;
 
@@ -16,11 +17,17 @@ class PermissionManager extends NodeManager implements PermissionManagerInterfac
         parent::__construct($permissionRepository);
     }
 
+    /**
+     * @throws RbacException
+     */
     public function remove(PermissionInterface $permission): bool
     {
         return $this->repository->deleteNode($permission->getId());
     }
 
+    /**
+     * @throws RbacException
+     */
     public function removeRecursively(PermissionInterface $permission): bool
     {
         return $this->repository->deleteSubtree($permission->getId());

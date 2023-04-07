@@ -21,8 +21,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 class SecurityInstallRbacCommand extends Command
 {
     public function __construct(
-        private PermissionRepository $permissionRepository,
-        private RoleRepository $roleRepository
+        private readonly PermissionRepository $permissionRepository,
+        private readonly RoleRepository $roleRepository
     ) {
         parent::__construct();
     }

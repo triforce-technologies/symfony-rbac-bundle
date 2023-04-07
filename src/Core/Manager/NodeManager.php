@@ -11,8 +11,7 @@ use RbacBundle\Repository\PermissionRepository;
 abstract class NodeManager implements NodeManagerInterface
 {
     public function __construct(protected RoleRepository|PermissionRepository $repository)
-    {
-    }
+    {}
 
     public function rootId(): int
     {
@@ -65,7 +64,7 @@ abstract class NodeManager implements NodeManagerInterface
 
     public function getPathId(string $path): int
     {
-        if (substr($path, -1) == "/") {
+        if (str_ends_with($path, "/")) {
             $path = substr($path, 0, strlen($path) - 1);
         }
         return $this->repository->getPathId($path);
@@ -128,8 +127,8 @@ abstract class NodeManager implements NodeManagerInterface
         return $nodes[count($nodes) - 2];
     }
 
-    public function reset()
+    public function reset(): void
     {
-        return $this->repository->reset();
+        $this->repository->reset();
     }
 }

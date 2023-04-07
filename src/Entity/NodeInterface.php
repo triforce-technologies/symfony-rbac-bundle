@@ -2,7 +2,7 @@
 
 namespace RbacBundle\Entity;
 
-interface NodeInterface
+interface NodeInterface extends \RbacBundle\Entity\PermissionInterface
 {
     public function getId(): ?int;
 

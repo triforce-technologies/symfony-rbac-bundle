@@ -3,6 +3,7 @@
 namespace RbacBundle\Core\Manager;
 
 use RbacBundle\Entity\RoleInterface;
+use RbacBundle\Exception\RbacUserNotProvidedException;
 
 interface UserManagerInterface
 {

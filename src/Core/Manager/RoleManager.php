@@ -4,8 +4,6 @@ namespace RbacBundle\Core\Manager;
 
 use RbacBundle\Entity\RoleInterface;
 use RbacBundle\Repository\RoleRepository;
-use RbacBundle\Entity\PermissionInterface;
-use RbacBundle\Repository\PermissionRepository;
 
 /**
  * @property RoleRepository $repository
@@ -13,8 +11,8 @@ use RbacBundle\Repository\PermissionRepository;
 class RoleManager extends NodeManager implements RoleManagerInterface
 {
     public function __construct(
-        private PermissionManager $permissionManager,
-        RoleRepository $roleRepository
+        private readonly PermissionManager $permissionManager,
+        RoleRepository                     $roleRepository
     ) {
         parent::__construct($roleRepository);
     }
