@@ -7,7 +7,7 @@ use Symfony\Component\String\Slugger\AsciiSlugger;
 
 #[ORM\MappedSuperclass]
 #[ORM\UniqueConstraint('unique_code', ['code', 'parent_id'])]
-#[ORM\Index(columns: ["code", "tree_left", "tree_right"], name: "permission_idx")]
+#[ORM\Index(columns: ["code", "tree_left", "tree_right"])]
 abstract class Node implements NodeInterface
 {
     #[ORM\Id]
