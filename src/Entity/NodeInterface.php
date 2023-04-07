@@ -2,7 +2,7 @@
 
 namespace Triforce\RBACBundle\Entity;
 
-interface NodeInterface extends \Triforce\RBACBundle\Entity\PermissionInterface
+interface NodeInterface
 {
     public function getId(): ?int;
 
