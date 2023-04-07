@@ -2,14 +2,13 @@
 
 namespace Triforce\RBACBundle\DependencyInjection;
 
-use Triforce\RBACBundle\Core\RbacInterface;
 use Symfony\Component\Config\FileLocator;
 use Triforce\RBACBundle\EventSubscriber\AccessControlDriver;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class TriforceRbacExtension extends Extension
+class TriforceRBACExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -31,6 +30,6 @@ class TriforceRbacExtension extends Extension
 
     public function getAlias(): string
     {
-        return 'triforce_rbac';
+        return 'rbac';
     }
 }
